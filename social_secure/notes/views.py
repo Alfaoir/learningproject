@@ -93,3 +93,8 @@ def Userlogin(request):
 def userlogintable(request):
     users = User.objects.all()  # Fetch all users from the User model
     return render(request, 'notes/tabledata.html', {'users': users})
+
+
+
+def crudtest(request):
+    return render(request , template_name='notes/crud.html')

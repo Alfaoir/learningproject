@@ -26,3 +26,112 @@ button {
     display: flex;
 }
 
+    
+
+
+/* These are for nav bar  */
+*{
+   margin :0px;
+   padding:0px;
+   box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color:#2a2a2a;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.logo{
+    color:#b4b3b3;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 10px;
+}
+
+
+.nav-links{
+   display: flex;
+   color: #b4b3b3;
+   justify-content: space-around;
+   width: 50%;
+   
+   
+
+}
+
+
+.nav-links a {
+    color: #ebebeb;
+
+    text-decoration: none;
+    letter-spacing: 5px;
+    
+    font-size: 15px;
+    
+}
+
+
+
+.nav-links li{
+list-style: none;
+}
+
+
+body{
+    background-image: url('books.avif');
+    background-size: cover;
+}
+
+
+.material-symbols-outlined{
+    position: relative;
+    top: 5px;
+    color: #ffffff;
+}
+
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown ul {
+    position: absolute;
+    top: 190%;
+    left: 0;
+    background-color: #302f2f; /* white background */
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none;
+    width: 200px;
+  }
+  
+  .dropdown ul li {
+    padding: 10px;
+    border-bottom: 1px solid #6200ff;
+  }
+  
+  .dropdown ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    
+  }
+  
+  .dropdown ul li a:hover {
+    background-color: #b6b6b6;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content {
+    z-index: 1;
+  }

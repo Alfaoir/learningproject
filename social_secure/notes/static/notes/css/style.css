@@ -1,0 +1,28 @@
+button { 
+    color: rgb(255, 255, 255);
+    background: #09aa39;
+}
+
+
+
+
+ 
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group .invalid-feedback {
+    color: rgb(52, 136, 73);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+
+.sto{
+    color: #09aa39;
+    display: flex;
+}
+

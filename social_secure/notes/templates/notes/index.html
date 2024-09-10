@@ -1,0 +1,19 @@
+{% extends 'notes/layout.html' %}
+
+
+
+
+
+{% block body %}
+
+<h1> You have successfully login to our website !  </h1>
+<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">{{request.user.username}}</button>
+<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">{{request.user.email}}</button>
+
+{% endblock %}
+
+
+
+
+
+

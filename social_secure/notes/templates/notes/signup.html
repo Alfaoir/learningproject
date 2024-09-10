@@ -1,0 +1,226 @@
+{% extends 'notes/layout.html' %}
+
+{% block body %}
+
+<!-- Display messages -->
+<p>{{ message.tags }}</p>
+
+<div class="container col-3">
+    <h5 id="success_text" style="text-align: center; color: rgb(28, 173, 125); display: none;"></h5>
+    <h5 id="error_text" style="text-align: center; color: rgb(145, 1, 1); display: none;"></h5>
+    <h1 class="sto">Signup Form</h1>
+</div>
+
+<div class="container col-3"> 
+    <form method="post" action="{% url 'Signup' %}" id="signupForm">
+      {% csrf_token %}
+      
+      <div class="form-group" id="name">
+        <label for="name">{{ form.name.label }}</label>
+        {{ form.name }}
+        <div class="invalid-feedback">Please enter your name</div>
+      </div>
+
+      <div class="form-group" id="username">
+        <label for="username">{{ form.username.label }}</label>
+        {{ form.username }}
+        <div class="invalid-feedback">Please choose a username</div>
+      </div>
+
+      <div class="form-group" id="email">
+        <label for="email">{{ form.email.label }}</label>
+        {{ form.email }}
+        <div class="invalid-feedback">Please enter a valid email address</div>
+      </div>
+
+      <div class="form-group" id="password">
+        <label for="password">{{ form.password.label }}</label>
+        {{ form.password }}
+        <div class="invalid-feedback">Please enter your password</div>
+      </div>
+
+      <div class="form-group" id="re_password">
+        <label for="re_password">{{ form.re_password.label }}</label>
+        {{ form.re_password }}
+        <div class="invalid-feedback">Please re-enter your password</div>
+      </div>
+
+      <button type="submit" class="button" id="submit-btn">Submit</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $('#signupForm').on('submit', function(e) {
+    e.preventDefault();
+    var password = $('#id_password').val();
+    var re_password = $('#id_re_password').val();
+    
+    if (password !== re_password) {
+      $('#error_text').text('YOUR PASSWORD IS NOT MATCHING').show();
+      return false;
+    }
+
+    // Form is valid, send the request
+    $.ajax({
+      type: 'POST',
+      url: $(this).attr('action'),  // Use the form's action attribute
+      data: $(this).serialize(),    // Serialize form data
+      success: function(response) {
+        console.log(response);
+        // Check if the response contains an error message
+        if (response.error) {
+          $('#error_text').text(response.error).show();
+        } else {
+          $('#success_text').text('You have successfully submitted the form - Congratulations!').show();
+          setTimeout(function() {
+            window.location.href = '/login';
+          }, 2000); // Redirect after 2 seconds
+        }
+      },
+      error: function(xhr, status, error) {
+        $('#error_text').text('An error occurred: ' + error).show();
+      }
+    });
+  });
+});
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

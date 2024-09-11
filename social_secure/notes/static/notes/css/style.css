@@ -85,6 +85,7 @@ list-style: none;
 body{
     background-image: url('books.avif');
     background-size: cover;
+    /* position: fixed; */
 }
 
 
@@ -92,6 +93,10 @@ body{
     position: relative;
     top: 5px;
     color: #ffffff;
+    font-family: 'Material Symbols Outlined';
+    line-height: normal !important;
+    font-size: 22px !important;
+    font-weight: 300;
 }
 
 
@@ -102,21 +107,21 @@ body{
     display: inline-block;
   }
   
-  .dropdown ul {
+  /* .dropdown ul {
     position: absolute;
     top: 190%;
     left: 0;
-    background-color: #302f2f; /* white background */
+    background-color: #302f2f; 
     border: 1px solid #ddd;
     padding: 10px;
     display: none;
     width: 200px;
-  }
+  } */
   
-  .dropdown ul li {
+  /* .dropdown ul li {
     padding: 10px;
     border-bottom: 1px solid #6200ff;
-  }
+  } */
   
   .dropdown ul li a {
     text-decoration: none;
@@ -134,4 +139,7 @@ body{
   
   .dropdown-content {
     z-index: 1;
+  }
+  .baner{
+    min-height: 400px;
   }

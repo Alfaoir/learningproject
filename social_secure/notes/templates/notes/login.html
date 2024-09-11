@@ -4,13 +4,10 @@
 {% block body %}
 
 
-<div class="container col-3" style="padding: bottom 3px; ">
-
-    <h3 style="padding-top: 150px; text-align: center; color: rgb(23, 150, 255);">Login Form </h3>
-
-    <form method="POST" action="{% url 'Userlogin' %}" id="loginForm">
+<div class="container col-4 my-5" >
+    <form method="POST" action="{% url 'Userlogin' %}" id="loginForm" class="shadow bg-light p-4 rounded-3">
         {% csrf_token %}
-
+        <h3 style="color: rgb(23, 150, 255);" class="text-center mb-3">Login Form </h3>
         <!-- Username input -->
         <div data-mdb-input-init class="form-outline mb-4">
           <input type="text" id="username" name="username" class="form-control" />
@@ -46,9 +43,9 @@
         <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
 
         <!-- Register buttons -->
-        <div class="text-center">
+        <div class="text-center d-flex">
           <p>Not a member? <a href="{% url 'Signup' %}">Register</a></p>
-          <p>or sign up with:</p>
+          <span>or sign up with:</span>
 
           <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
             <i class="fab fa-github"></i>

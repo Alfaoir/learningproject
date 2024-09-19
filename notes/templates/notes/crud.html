@@ -1,0 +1,62 @@
+{% extends 'notes/layout.html' %}
+
+
+
+
+
+
+{% block body %}
+
+<div style="padding-top: 5rem;">
+<div class="container col-3" style="justify-content: center; display:flex; align-items: center; background-color: aliceblue;">
+    <p style="color: rgb(10, 10, 10);" >Register here !  </p>
+<form method="post" style="padding: 2rem; padding-top: 5rem;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+   
+</div>
+<br>
+<br>
+
+</div>
+ <div class="container col-4"  style="justify-content: center; justify-content: center; background-color:aliceblue">
+   <h1 style="display: flex; justify-content: center;">Table </h1>
+  
+    {% for soldier in soldiers %}
+
+    <div class="container col-12" >
+      <h1 style="background-color: aliceblue;"></h1>
+    <table class="table" style="color: rgb(0, 0, 0);">
+        <thead>
+          <tr>
+            
+            
+            <th scope="col">{{soldier.id}}</th>
+            <th scope="col" ><button ><a href="{% url 'update_soldier' soldier.id %}">Update</a></button></th>
+            <th scope="col" ><button ><a href="{% url 'delete_soldier' soldier.id %}">Delete</a></button></th>
+            
+            <th scope="col">{{soldier.title}}</th>
+            <th scope="col">{{soldier.name}}</th>
+            <th scope="col">{{soldier.email}}</th>
+        
+          </tr>
+          
+        </thead>
+       
+      </table>
+    </div>
+      {% endfor %}
+</div>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+

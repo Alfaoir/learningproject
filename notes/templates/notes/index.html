@@ -1,0 +1,45 @@
+{% extends 'notes/layout.html' %}
+
+{% block body %}
+
+
+<div class="container col-6" style="justify-content: center; text-align: center; color: rgb(0, 0, 0); padding-top: 10rem;">
+{% if user.is_authenticated %}
+
+<h1 style="color: aliceblue;">Welcome back</h1>
+<h1 style="color: aliceblue;"> {{ user.username }}!</h1>
+
+
+
+
+<!-- This is Logout button functionality  -->
+   <form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+   <button type="submit">Log Out </button>
+   </form>  
+
+
+
+
+{% else %}
+<h3>You are not logged in</h3>
+<a href="{% url 'login' %}">Log In</a>
+
+
+{% endif %}
+<button type="button" class="btn btn-lg btn-danger" >{{request.user.username}}</button>
+<br>
+<br>
+<button type="button" class="btn btn-lg btn-danger">{{request.user.email}}</button>
+</div>
+
+
+
+
+{% endblock %}
+
+
+
+
+
+

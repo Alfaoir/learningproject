@@ -1,0 +1,167 @@
+button { 
+    color: rgb(255, 255, 255);
+    background: #09aa39;
+}
+
+
+
+
+ 
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group .invalid-feedback {
+    color: rgb(52, 136, 73);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+
+.sto{
+    color: #09aa39;
+    display: flex;
+}
+
+    
+
+
+/* These are for nav bar  */
+*{
+   margin :0px;
+   padding:0px;
+   box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color:#2a2a2a;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.logo{
+    color:#b4b3b3;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 10px;
+}
+
+
+.nav-links{
+   display: flex;
+   color: #b4b3b3;
+   justify-content: space-around;
+   width: 50%;
+   
+   
+
+}
+
+
+.nav-links a {
+    color: #ebebeb;
+
+    text-decoration: none;
+    letter-spacing: 5px;
+    
+    font-size: 15px;
+    
+}
+
+
+
+.nav-links li{
+list-style: none;
+}
+
+
+body {
+  background-image: url('agera.jpg');
+  background-size: 1920px 1150px; /* sets the width to 1000px and height to 800px */
+}
+
+
+.material-symbols-outlined{
+    position: relative;
+    top: 5px;
+    color: #ffffff;
+}
+
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #302f2f; /* white background */
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none;
+    width: 200px;
+  }
+  
+  .dropdown ul li {
+    padding: 10px;
+    border-bottom: 1px solid #6200ff;
+  }
+  
+  .dropdown ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    
+  }
+  
+  .dropdown ul li a:hover {
+    background-color: #b6b6b6;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content {
+    z-index: 1;
+  }
+
+
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem;
+    border: 1px solid #3a12c9;
+  }
+  
+  .form-group button[type="submit"] {
+    background-color: #1f14c0;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+

@@ -1,0 +1,64 @@
+{% extends 'notes/layout.html' %}
+
+
+
+
+
+{% block body %}
+
+<h3 style="text-align: center; padding-top: 100px;"> Data Table  </h3>
+
+
+
+<div class="container col-6">
+<table class="table caption-top">
+    <caption>List of users</caption>
+    <thead>
+        {%for user in users%}
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">{{user.username}}</th>
+        <th scope="col">{{user.id}}</th>
+        <th scope="col">{{user.email}}</th>
+      </tr>
+      {% endfor %}
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <!-- This is a button to shift to some other url  -->
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+

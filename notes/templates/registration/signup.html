@@ -1,34 +1,22 @@
-{% extends 'notes/layout.html' %}
+
+{% extends 'notes/base.html' %}
+
+
+
 
 
 {% block body %}
 
 
 
-
-<div class="container col-4" style="padding: 5rem; background-color: rgb(39, 39, 39); margin-top: 5rem; border-radius: 2rem; color: aliceblue;">
-  <h2>Sign up</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign Up</button>
-</form>
-
-</div>
-
-
+  
+<h1>welcome to signup page </h1>
 
 
 
 
 
 {% endblock %}
-
-
-
-
-
-
 
 
 

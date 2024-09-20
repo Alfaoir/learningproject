@@ -1,27 +1,24 @@
-{% extends 'notes/layout.html' %}
+{% extends 'notes/base.html' %}
+
 
 
 
 
 
 {% block body %}
-<div style="color: antiquewhite; padding: 5rem; background-color: rgb(46, 46, 46); text-align: center; margin-top: 5rem; border-radius: 1rem;" class="container col-3">
-<h1> Login   Page </h1>
-<br>
-<br>
 
 
 
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
-{{form.as_p}}
-<button type="submit" class="btn btn-success">LogIn</button>
+  
+ 
+        
 
+
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit">Log In</button>
 </form>
-</div>
+
 {% endblock %}
-
-
-
-
-

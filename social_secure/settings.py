@@ -127,5 +127,5 @@ STATIC_ROOT = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
-LOGINOUT_REDIRECT_URL = 'logout/'
+LOGOUT_REDIRECT_URL = '/'
 

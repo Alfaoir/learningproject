@@ -110,6 +110,23 @@ class SignUpView(CreateView):
 
 
 
+def base(request):
+    return render(request , template_name='notes/base.html')
+
+
+
+def aboutus(request):
+    return render(request , template_name='notes/about.html')
+
+
+# def LoginView(request):
+#     return render(request , template_name='registration/login.html')
+
+
+def sign(request):
+    return render(request , template_name='notes/signup.html')
+
+
 
 
 
